@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 class App extends Component {
@@ -30,8 +31,12 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Route path="/courses" component={Courses}/>
-        <Route path="/users" component={Users}/>
+      {/* switch yerine exact yazsakta olurdu cunku oncesinde hepsi de geliyordu courses koduna exact da yazabilirdik */}
+        <Switch>
+          <Route path="/users" component={Users}/>
+          <Route path="/courses/course" component={Course}/>
+          <Route path="/courses" component={Courses}/>
+        </Switch>
       </div>
     );
   }
