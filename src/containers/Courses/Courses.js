@@ -22,7 +22,7 @@ class Courses extends Component {
                             return (
                                 <Link 
                                     key={course.id} 
-                                    to={this.props.match.url + '/course'}>
+                                    to={this.props.match.url + '/' + course.id}>
                                     <article 
                                         className="Course">
                                         {course.title}
