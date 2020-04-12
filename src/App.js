@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Courses from './containers/Courses/Courses';
 // import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, Redirect } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import NotFound from './component/NotFound/NotFound';
 
@@ -37,6 +37,7 @@ class App extends Component {
           <Route path="/users" component={Users}/>
           {/* <Route path="/courses/:courseId" component={Course}/> */}
           <Route path="/courses" component={Courses}/>
+          <Redirect from="/all-courses" to="/courses"/>
           <Route component={NotFound}/>
         </Switch>
       </div>
