@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
-import Course from './containers/Course/Course';
+// import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 import { Route, Switch } from 'react-router';
 import { NavLink } from 'react-router-dom';
@@ -34,7 +34,7 @@ class App extends Component {
       {/* switch yerine exact yazsakta olurdu cunku oncesinde hepsi de geliyordu courses koduna exact da yazabilirdik */}
         <Switch>
           <Route path="/users" component={Users}/>
-          <Route path="/courses/:courseId" component={Course}/>
+          {/* <Route path="/courses/:courseId" component={Course}/> */}
           <Route path="/courses" component={Courses}/>
         </Switch>
       </div>
